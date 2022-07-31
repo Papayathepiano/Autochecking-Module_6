@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        display: block;
+        margin: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="javascript:void(0);">
+      <select>
+        <optgroup label="Developer">
+          <option value="frontend">Frontend</option>
+        </optgroup>
+        <optgroup label="Base skills">
+          <option value="html" selected>HTML</option>
+          <option value="css">CSS</option>
+          <option value="js">JavaScript</option>
+        </optgroup>
+        <optgroup label="Frameworks" disabled>
+          <option value="vue">Vue</option>
+          <option value="react">React + GraphQL</option>
+          <option value="angular">Angular</option>
+        </optgroup>
+      </select>
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      form {
+        width: 28rem;
+        margin: 1rem;
+        padding: 2rem 1rem;
+        font-size: 1rem;
+        text-align: center;
+        box-shadow: 0px 4px 4px hsla(0, 0%, 0%, 0.15);
+      }
+      button {
+        display: block;
+        margin: 0 auto 1rem;
+      }
+      .select-custom {
+        /* 1 - usuń style podstawowe */
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        outline: none;
+
+        /* 2 - dodaj rozmiary i rozmieszczenie */
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto 1rem;
+        padding: 0.6em 1.4em 0.5em 0.8em;
+
+        /* style border */
+        border: 1px solid #aaa;
+        border-radius: 0.5em;
+
+        /* style tekstu */
+        font-size: 16px;
+        font-family: sans-serif;
+        font-weight: 700;
+        color: #444;
+        line-height: 1.3;
+
+        /* cień dla bloku */
+        box-shadow: 0 1px 0 1px hsla(0, 0%, 0%, 0.04);
+
+        /* tło i zdjęcie w tle */
+        background-repeat: no-repeat;
+        background-position: right 0.7rem top 50%, 0 0;
+        background-size: 0.65rem auto, 100%;
+
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' preserveAspectRatio='xMidYMid'%3e%3cg%3e%3cpolygon points='0,0 16,0 8,16' fill='blue'/%3e%3c/g%3e%3c/svg%3e"),
+          linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+      }
+    </style>
+  </head>
+  <body>
+    <form action="javascript:void(0);">
+      <select class="select-custom">
+        <optgroup label="Developer">
+          <option value="frontend">Frontend</option>
+        </optgroup>
+        <optgroup label="Base skills">
+          <option value="html" selected>HTML</option>
+          <option value="css">CSS</option>
+          <option value="js">JavaScript</option>
+        </optgroup>
+        <optgroup label="Frameworks" disabled>
+          <option value="vue">Vue</option>
+          <option value="react">React + GraphQL</option>
+          <option value="angular">Angular</option>
+        </optgroup>
+      </select>
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </form>
+  </body>
+</html>

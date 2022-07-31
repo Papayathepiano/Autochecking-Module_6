@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+      }
+      section {
+        margin: 0 2rem;
+        padding: 1rem;
+        box-shadow: 0px 4px 4px hsla(0, 0%, 0%, 0.15);
+      }
+      form {
+        margin: 1rem;
+        padding: 0 1rem;
+        font-size: 1rem;
+        display: flex;
+        justify-content: space-between;
+      }
+      label {
+        display: block;
+        color: #757575;
+      }
+      input {
+        display: block;
+      }
+      button {
+        --h: 2rem;
+        height: var(--h);
+        line-height: var(--h);
+        min-width: 10.5rem;
+        margin: 1rem auto;
+        display: block;
+        padding: 0 1rem;
+        text-align: center;
+        font-weight: 700;
+        letter-spacing: 0.08rem;
+        color: #fff;
+        border-style: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      button[type="submit"] {
+        background-color: #2196f3;
+      }
+      button[type="reset"] {
+        background-color: crimson;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <section>
+        <h4>Choose only one value</h4>
+        <form action="javascript:void(0);" id="id-radio">
+          <div>
+            <label for="id-red">red</label>
+            <label for="id-green">green</label>
+            <label for="id-blue">blue</label>
+            <label for="id-black">black</label>
+          </div>
+          <div>
+            <input id="id-red" name="colors" type="radio" value="red" />
+            <input
+              id="id-green"
+              name="colors"
+              type="radio"
+              value="green"
+              checked
+            />
+            <input id="id-blue" name="colors" type="radio" value="blue" />
+            <input
+              id="id-black"
+              name="colors"
+              type="radio"
+              value="black"
+              disabled
+            />
+          </div>
+        </form>
+        <button form="id-radio" type="submit">Submit</button>
+        <button form="id-radio" type="reset">Reset</button>
+      </section>
+      <section>
+        <h4>Choose multiple values</h4>
+        <form action="javascript:void(0);" id="id-checkbox">
+          <div>
+            <label for="red">red</label>
+            <label for="green">green</label>
+            <label for="blue">blue</label>
+            <label for="black">black</label>
+          </div>
+          <div>
+            <input id="red" name="colors" type="checkbox" value="red" />
+            <input
+              id="green"
+              name="colors"
+              type="checkbox"
+              value="green"
+              checked
+            />
+            <input id="blue" name="colors" type="checkbox" value="blue" />
+            <input
+              id="black"
+              name="colors"
+              type="checkbox"
+              value="black"
+              disabled
+            />
+          </div>
+        </form>
+        <button form="id-checkbox" type="submit">Submit</button>
+        <button form="id-checkbox" type="reset">Reset</button>
+      </section>
+    </div>
+  </body>
+</html>

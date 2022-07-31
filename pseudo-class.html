@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        max-width: 360px;
+        margin: auto;
+        padding: 1rem 2rem 1rem 1rem;
+        border-radius: 0.25rem;
+        box-shadow: 2px 2px 6px 3px hsla(0, 0%, 0%, 0.2);
+        font-family: sans-serif;
+        text-transform: uppercase;
+      }
+      .buttons,
+      label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      label {
+        margin-bottom: 1.5rem;
+      }
+      label span {
+        opacity: 0.6;
+      }
+      input {
+        border: 2px solid lavender;
+        padding: 4px;
+        border-radius: 0.25rem;
+      }
+      button {
+        padding: 0.5rem 1.75rem;
+        border-radius: 0.25rem;
+        text-transform: uppercase;
+        border: none;
+        outline: none;
+        opacity: 0.6;
+        background-color: gray;
+        color: #fff;
+      }
+      button:hover {
+        background-color: gray;
+        opacity: 1;
+      }
+
+      /* placeholder */
+      input::placeholder {
+        /* Napisz kod pod tym wierszem */
+        color: rebeccapurple;
+      }
+
+      /* focus-within */
+      label:focus-within span {
+        opacity: 1;
+      }
+      form:focus-within button[type="submit"] {
+        opacity: 0.6;
+        background-color: seagreen;
+      }
+      form:focus-within button[type="reset"] {
+        opacity: 0.6;
+        background-color: crimson;
+      }
+      form:focus-within {
+        box-shadow: 1px 1px 2px 2px hsla(0, 0%, 0%, 0.3);
+      }
+
+      /* valid */
+      form:valid button {
+        color: #fff;
+        pointer-events: none;
+      }
+
+      /* combination  */
+      form:focus-within:valid button {
+        opacity: 1;
+      }
+      input:not(:placeholder-shown):valid {
+        /* Napisz kod pod tym wierszem */
+        border-color: seagreen;
+      }
+      input:not(:placeholder-shown):invalid {
+        /* Napisz kod pod tym wierszem */
+        border-color: crimson;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="javascript:void(0);" method="POST">
+      <label>
+        <span>Imię</span>
+        <input type="text" name="name" placeholder="Imię" />
+      </label>
+      <label>
+        <span>E-mail</span>
+        <input type="email" name="email" required placeholder="Adres e-mail" />
+      </label>
+      <label>
+        <span>Hasło</span>
+        <input
+          type="password"
+          name="password"
+          required
+          placeholder="Hasło zawierające 3 do 5 symboli"
+          pattern=".{3,5}"
+          title="od 3 do 5 symboli"
+        />
+      </label>
+      <div class="buttons">
+        <button type="submit">wyślij</button>
+        <button type="reset">resetuj</button>
+      </div>
+    </form>
+  </body>
+</html>
